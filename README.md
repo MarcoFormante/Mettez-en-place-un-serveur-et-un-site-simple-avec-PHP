@@ -17,3 +17,14 @@ Pour installer ce projet :
 DONE
 
 1. Cloned the project repository, and pushed it to my GitHub account.
+2. Created the database and the oeuvres table: 
+
+    - CREATE DATABASE artbox
+    
+    - CREATE table oeuvres(
+	id int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    titre varchar(255) NOT NULL,
+	description TEXT NOT NULL,
+	artiste varchar(255) NOT NULL,
+	image varchar(255) NOT NULL 
+)
