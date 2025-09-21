@@ -21,7 +21,8 @@ Pour installer ce projet :
 2. Created the database and the oeuvres table: 
 
     - **CREATE DATABASE artbox**
-    - ```
+    - 
+    ```
      CREATE table oeuvres(
 	id int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
     titre varchar(255) NOT NULL,
@@ -29,7 +30,7 @@ Pour installer ce projet :
 	artiste varchar(255) NOT NULL,
 	image varchar(255) NOT NULL 
 )
-```
+
 
 
 3. Add sample entries into the oeuvres table using the following SQL statement:
@@ -47,4 +48,3 @@ Pour installer ce projet :
     'img/dan-cristian-padure.png'
     )
 
-```
