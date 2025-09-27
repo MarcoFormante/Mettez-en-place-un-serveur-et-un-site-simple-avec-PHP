@@ -63,3 +63,14 @@ Pour installer ce projet :
  - *functions.php* : Create function GenerateErrorMessage for displaying errors.
  - *index.php* : Add error message if no entries in database and escape HTML output.
  - *style.css* : add style for the new class `error-message`.
+
+
+### branch: correction-etape3 : Étape 4 – Mettez à jour la page de détail d'une œuvre 
+
+- Add Database connection.
+- Fetch oeuvre data.
+- Escape all fields.
+- Add RedirectTo function to redirect to index if there is not valid ID or not valid oeuvre.
+
+
+ 
