@@ -30,7 +30,7 @@ Pour installer ce projet :
 	artiste varchar(255) NOT NULL,
 	image varchar(255) NOT NULL 
 )
-
+    ```
 
 
 3. Add sample entries into the oeuvres table using the following SQL statement:
@@ -47,4 +47,8 @@ Pour installer ce projet :
     'Andrew Forsythe',
     'img/dan-cristian-padure.png'
     )
+```
 
+### branch: correction-etape2 : Étape 2 – Concevez la base de données du projet
+
+ - Add all entries into database and deleted file `oeuvres.php`. 
