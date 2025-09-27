@@ -6,7 +6,7 @@ function generateErrorMessage(string $message){
 }
 
 
-function redirectTo($file){
+function redirectTo(string $file){
     return header(header: "Location:$file.php");
 }
 
