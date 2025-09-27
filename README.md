@@ -1,8 +1,6 @@
 # The ArtBox
 
-Ce projet contient : 
-* Le code initial du projet The ArtBox pour réaliser le projet 4 du parcours PHP/Symfony sur la branche `main`.
-* Les corrections des différentes étapes sur les branches `correction-etapeX` (avec X le numéro de l'étape).
+
 
 ## Installation du projet
 
@@ -10,8 +8,23 @@ Pour installer ce projet :
 1. Télécharger le projet en cliquant sur le bouton "Code" ci-dessus puis "Download ZIP".
 2. Dézipper le projet et placez-le dans le dossier contenant vos projets PHP habituels.
 3. Ouvrir le projet dans le navigateur via l'adresse http://localhost/NOM_DU_DOSSIER (ou autre selon votre configuration)
-4. Ouvrir le projet dans votre IDE (exemple : VSCode) pour réaliser les prochaines étapes.
 
+
+# L'exercice:
+Vous avez récemment réalisé la refonte du site de The ArtBox, une galerie d'art contemporain. 
+Fatima, la responsable de communication, reprend contact avec vous pour une nouvelle mission. 
+Elle souhaite ajouter de nouvelles œuvres sur le site web, sans avoir à modifier le code. 
+ 
+Pour y parvenir, 
+vous allez mettre en place une base de données pour stocker les œuvres,
+ ainsi qu’un formulaire de création de nouvelles œuvres avec les champs suivants : 
+
+- nom de l'œuvre ; 
+- nom de l'artiste ;
+- lien vers la photo de l'œuvre ;
+- description de l’œuvre.
+
+Dans cette première version, il n’y aura pas de contrôle d’accès, ce qui veut dire que n’importe qui peut ajouter des œuvres.
 
 
 # DONE 
@@ -29,11 +42,11 @@ Pour installer ce projet :
 	description TEXT NOT NULL,
 	artiste varchar(255) NOT NULL,
 	image varchar(255) NOT NULL 
-)
+    )
     ```
 
 
-3. Add sample entries into the oeuvres table using the following SQL statement:
+3. Add some entries to the oeuvres table using the following SQL statement:
 
 ```
     INSERT INTO oeuvres(titre,description,artiste,image) VALUES(
@@ -79,7 +92,6 @@ Pour installer ce projet :
 - Check if description field has at least 3 characters.
 - Check if image field is a valid URL. 
 - Check and diplay errors.  
-
 
 
 ### branch: correction-etape6 : Étape 6 – Insérez l’œuvre en BDD
