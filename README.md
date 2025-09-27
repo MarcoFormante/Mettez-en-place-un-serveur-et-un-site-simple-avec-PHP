@@ -65,7 +65,7 @@ Pour installer ce projet :
  - *style.css* : add style for the new class `error-message`.
 
 
-### branch: correction-etape3 : Étape 4 – Mettez à jour la page de détail d'une œuvre 
+### branch: correction-etape4 : Étape 4 – Mettez à jour la page de détail d'une œuvre 
 
 - Add Database connection.
 - Fetch oeuvre data.
@@ -73,4 +73,9 @@ Pour installer ce projet :
 - Add RedirectTo function to redirect to index if there is not valid ID or not valid oeuvre.
 
 
- 
+### branch: correction-etape5 : Étape 5 – Validez le formulaire de création d’une œuvre
+
+- Check if all fields are set and not empty.
+- Check if description field has at least 3 characters.
+- Check if image field is a valid URL. 
+- Check and diplay errors.  
