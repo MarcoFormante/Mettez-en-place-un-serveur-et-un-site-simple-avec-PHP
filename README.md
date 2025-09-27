@@ -79,3 +79,10 @@ Pour installer ce projet :
 - Check if description field has at least 3 characters.
 - Check if image field is a valid URL. 
 - Check and diplay errors.  
+
+
+
+### branch: correction-etape6 : Étape 6 – Insérez l’œuvre en BDD
+
+- Add Connection for creating new Oeuvre into database with valid inputs
+- Verify if the new entries appear on the homepage.
