@@ -52,3 +52,14 @@ Pour installer ce projet :
 ### branch: correction-etape2 : Étape 2 – Concevez la base de données du projet
 
  - Add all entries into database and deleted file `oeuvres.php`. 
+
+
+
+
+### branch: correction-etape3 : Étape 3 – Mettez à jour la page d'accueil du site
+
+ - Create `bdd.php` file with PDO Connection returned by `connection` function.
+ - *index.php* : Fetch all entries and test in vardump(). 
+ - *functions.php* : Create function GenerateErrorMessage for displaying errors.
+ - *index.php* : Add error message if no entries in database and escape HTML output.
+ - *style.css* : add style for the new class `error-message`.
