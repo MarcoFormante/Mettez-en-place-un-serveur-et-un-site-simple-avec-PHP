@@ -33,11 +33,30 @@ if( !filter_var($_POST['image'],FILTER_VALIDATE_URL) || !preg_match('/^https?:\/
 
 
 if (!count($errors)) {
+     // if no errors, insert the oeuvre into database and redirect to homepage
+    try {
+        $query = "INSERT INTO oeuvres(titre,artiste,image,description)
+                  VALUES(:titre,:artiste,:image,:description)
+                 ";
+        $pdoConnection = connection();
+        $pdo = $pdoConnection->prepare($query);
+        $pdo->execute( [
+            'titre' => trim($_POST['titre']),
+            'artiste' => trim($_POST['artiste']),
+            'image' => trim($_POST['image']),
+            'description' => trim($_POST['description'] )
+        ]);
 
-    echo "NO ERRORS";
+        redirectTo('index');
+
+    } catch (Exception $e) {
+        // if error, show a generic error message  
+        generateErrorMessage("<b>Une Erreur est survenue, Veuillez retentez plus tard.</b>"); 
+    }
 }
-
 ?>
+
+<?php if(count($errors)): ?>
 
 <div id="form-errors-container">
     <p>Le formulaire contient les erreurs suivantes :</h2>
@@ -47,6 +66,8 @@ if (!count($errors)) {
         <?php endforeach ;?>
     </ul>
 </div>
+
+<?php endif ?>
 
 
 <?php require 'footer.php'; ?>
