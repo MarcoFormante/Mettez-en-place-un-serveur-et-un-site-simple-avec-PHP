@@ -1,6 +1,15 @@
 <?php
+    require 'bdd.php';
+
+    $pdoConnection = connection();
+    $stmt = $pdoConnection->prepare("SELECT * FROM oeuvres");
+    $stmt->execute();
+
+    $oeuvres = $stmt->fetchAll();
+
+    var_dump($oeuvres);
+    
     require 'header.php';
-    require 'oeuvres.php';
 ?>
 <div id="liste-oeuvres">
     <?php foreach($oeuvres as $oeuvre): ?>
