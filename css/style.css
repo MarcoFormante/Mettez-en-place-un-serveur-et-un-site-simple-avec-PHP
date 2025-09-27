@@ -168,3 +168,9 @@ input[type="submit"] {
         gap: 0;
     }
 }
+
+.error-message{
+    text-align: center;
+    font-size: 1.1rem;
+}
+
