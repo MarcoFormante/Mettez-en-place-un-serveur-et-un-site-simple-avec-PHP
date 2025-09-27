@@ -2,6 +2,7 @@
 require 'functions.php';
 require 'bdd.php';
 
+require 'header.php';
 
 $errors = [];
 $FORM_PARAMS = ['titre', 'artiste', 'image', 'description'];
@@ -33,5 +34,19 @@ if( !filter_var($_POST['image'],FILTER_VALIDATE_URL) || !preg_match('/^https?:\/
 
 if (!count($errors)) {
 
-    echo "HELLO WORLD";
+    echo "NO ERRORS";
 }
+
+?>
+
+<div id="form-errors-container">
+    <p>Le formulaire contient les erreurs suivantes :</h2>
+    <ul>
+        <?php foreach ($errors as $error): ?>
+            <li><?= $error ?></li>
+        <?php endforeach ;?>
+    </ul>
+</div>
+
+
+<?php require 'footer.php'; ?>
